@@ -39,10 +39,5 @@ describe("Blog de www.thefreerangetesters.com",()=>{
         cy.get('.font_3 > span').should("contain","Aprender puede ser fácil.")
         cy.get('#comp-l8ru5rvh1 > [data-testid="linkElement"] > .M3I7Z2').should("be.visible")
     });
-    it('Validar que el boton de curso funcione ', () => {
-        cy.get('#comp-l02x1m8d2label').should("exist").click()
-        cy.title().should("contain","Cursos | Free Range Testers")
-        cy.get('.font_3 > span').should("contain","Aprender puede ser fácil.")
-        cy.get('#comp-l8ru5rvh1 > [data-testid="linkElement"] > .M3I7Z2').should("be.visible")
-    });
+    
 })
