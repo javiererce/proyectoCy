@@ -39,5 +39,10 @@ describe("Blog de www.thefreerangetesters.com",()=>{
         cy.get('.font_3 > span').should("contain","Aprender puede ser fácil.")
         cy.get('#comp-l8ru5rvh1 > [data-testid="linkElement"] > .M3I7Z2').should("be.visible")
     });
+<<<<<<< HEAD
    
 })
+=======
+    
+})
+>>>>>>> 48d1c8b1196396fec9eb7fed88ca92c6b824d9d6
