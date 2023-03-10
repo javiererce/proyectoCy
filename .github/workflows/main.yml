@@ -10,3 +10,9 @@ jobs:
         uses: cypress-io/github-action@v5.3.0
         with:
             start: npx cypress run
+      - name: allure-html-reporter-github-pages
+        uses: PavanMudigonda/allure-html-reporter-github-pages@494af460cf5d0c0a0a4e48f800fc3fe48891cf21
+        with:
+            start: ALLURE RESULTS JSON FILE
+         
+  
