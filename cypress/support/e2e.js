@@ -16,7 +16,6 @@
 // Import commands.js using ES2015 syntax:
 import { Runnable } from 'mocha'
 import './commands'
-import '@shelex/cypress-allure-plugin';
 
 Cypress.on("uncaught:exception",(err,Runnable)=>{
     return false
@@ -25,4 +24,3 @@ Cypress.on("uncaught:exception",(err,Runnable)=>{
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 require('@cypress/xpath');
-require('@shelex/cypress-allure-plugin');
