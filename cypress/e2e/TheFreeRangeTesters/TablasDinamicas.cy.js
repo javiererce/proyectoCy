@@ -6,11 +6,5 @@ describe("",()=>{
         cy.visit("")
     });
 
-    it('', () => {
-        cy.title().should("")
-        
-    });
-
-    
 
 });
