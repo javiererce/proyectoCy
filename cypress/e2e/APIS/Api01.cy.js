@@ -13,13 +13,11 @@ describe("Pruebas 01 de APIS con Cypress",()=>{
         cy.visit("https://jsonplaceholder.typicode.com/")
         cy.request("/posts").its("body").should("have.length",100)
     });
-
     it('Validar el titulo del POST Nnumero 1 ', () => {
         cy.visit("https://jsonplaceholder.typicode.com/")
         cy.request("/posts/1").its("body")
         .should("have.property","title","sunt aut facere repellat provident occaecati excepturi optio reprehenderit")
     });
-
     it('Validar el JSON del endpoint POST', () => {
         cy.request("POST","https://jsonplaceholder.typicode.com/posts",{
             userId:1,
@@ -31,7 +29,6 @@ describe("Pruebas 01 de APIS con Cypress",()=>{
             expect(response.body).to.have.property("userId",1)
         })
     })
-
     it('Validar el ID del JSON del endpoint POST', () => {
         cy.request("POST","https://jsonplaceholder.typicode.com/posts")
           
