@@ -8,16 +8,16 @@ describe("Pruebas 01 de APIS con Cypress",()=>{
         }).then((response)=>{
             expect(response.status).to.eq(200)
         })
-    });
+    })
     it('El endpoint GET tiene 100 entradas', () => {
         cy.visit("https://jsonplaceholder.typicode.com/")
         cy.request("/posts").its("body").should("have.length",100)
-    });
+    })
     it('Validar el titulo del POST Nnumero 1 ', () => {
         cy.visit("https://jsonplaceholder.typicode.com/")
         cy.request("/posts/1").its("body")
         .should("have.property","title","sunt aut facere repellat provident occaecati excepturi optio reprehenderit")
-    });
+    })
     it('Validar el JSON del endpoint POST', () => {
         cy.request("POST","https://jsonplaceholder.typicode.com/posts",{
             userId:1,
