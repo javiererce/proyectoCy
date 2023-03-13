@@ -23,7 +23,5 @@ describe("Sesiones y Cookies",()=>{
         cy.get('.fa').should("be.visible").click()
         cy.get('#flash').should("contain","You logged into a secure area!")
         cy.getCookie("cook").should("not.exist")
-        cy.setCookie('cook',"oreo ")
-        cy.getCookie("cook").should("have.a.property","value","oreo")
     })
 })

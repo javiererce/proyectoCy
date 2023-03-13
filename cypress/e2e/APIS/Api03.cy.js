@@ -11,7 +11,6 @@ describe("Loguear -Basic Auth y Auth con Forms",function(){
         })
         cy.get("p").should("include.text","Congratulations!")
     })
-
     it('Hago login en un form usando un request del tipo POST', () => {
         cy.visit("https://the-internet.herokuapp.com")
         cy.request({
@@ -25,5 +24,4 @@ describe("Loguear -Basic Auth y Auth con Forms",function(){
         cy.visit("https://the-internet.herokuapp.com/secure")
         cy.title().should("exist").should("contain","The Internet")
     })
-
 })
