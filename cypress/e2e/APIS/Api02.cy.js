@@ -9,7 +9,7 @@ describe("Pruebas 02 de APIS con Cypress",()=>{
             expect(response.status).to.eq(200)
         })
     })
-    it('Validar el correcto funcionamiento del request PUT', () => {
+    it('Validar el correcto funcionamiento de la request PUT', () => {
         cy.request("PUT","https://jsonplaceholder.typicode.com/posts/2",{
             title: "El señor de los anillos",
             body: "Una pelicula de J. R. R. Tolkien"
