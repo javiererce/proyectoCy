@@ -9,7 +9,6 @@ describe("Pruebas 01 de APIS con Cypress",()=>{
             expect(response.status).to.eq(200)
         })
     });
-
     it('El endpoint GET tiene 100 entradas', () => {
         cy.visit("https://jsonplaceholder.typicode.com/")
         cy.request("/posts").its("body").should("have.length",100)
