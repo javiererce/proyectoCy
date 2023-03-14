@@ -12,7 +12,7 @@
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
     "@shelex/cypress-allure-plugin": "^2.35.2",
-    "cypress": "^12.7.0",
+    "cypress": "^12.8.0",
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "dependencies": {
