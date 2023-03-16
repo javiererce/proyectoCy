@@ -9,5 +9,5 @@ testData.forEach((testData) => {
             cy.title().should("include",testData.title)
         })
     })
-});
+})
 
