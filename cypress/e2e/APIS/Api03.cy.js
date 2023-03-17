@@ -17,11 +17,17 @@ describe("Loguear -Basic Auth y Auth con Forms",function(){
             method: "POST",
             url: "/authenticate",
             form:true,
-            body: {username:"tomsmith ",
-            password:"SuperSecretPassword!"}
+            body: {username:"tomsmith",
+            password:"SuperSecretPassword!"
+           }
         })
         cy.getCookie("rack.session").should("exist")
         cy.visit("https://the-internet.herokuapp.com/secure")
+        cy.title().should("exist").should("contain","The Internet")
+    })
+
+    it('Mismo test de arrriba pero con el comando login', () => {
+        cy.login()
         cy.title().should("exist").should("contain","The Internet")
     })
 })

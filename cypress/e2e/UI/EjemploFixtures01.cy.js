@@ -10,7 +10,6 @@ describe("Ejemplo con Fixture",()=>{
             globalThis.data = data;
         })
     })
-
     it('Validar el Login', () => {
         cy.get('[data-test="username"]').should("be.visible").type(data.nombre)
         cy.get('[data-test="password"]').should("be.visible").type(data.password)
