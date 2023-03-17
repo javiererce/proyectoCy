@@ -18,7 +18,6 @@ describe("Ejemplo con Fixture",()=>{
         cy.get('.title').should("be.visible")
         cy.title().should("contains","Swag Labs")
     })
-
 })
 //---------------------------------------------------------------------------------
 
