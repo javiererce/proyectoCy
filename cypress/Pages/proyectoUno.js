@@ -1,15 +1,11 @@
-
-///<reference types="Cypress" />
-require('@cypress/xpath');
-
-describe('Practica con CheckBox', () => {
-    beforeEach(()=>{
+class CheckBox{
+    visitCheckBox(){
         cy.visit("https://testingqarvn.com.es/prueba-de-campos-checkbox/")
         cy.title().should("eq","Prueba de campos Checkbox | TestingQaRvn")
         cy.wait(1000)
-    })
+    }
 
-    it('logearse con datos validos', () => {
+    logDatosValidos() {
         cy.get('#wsf-1-field-29').should("be.visible").type("Maximiliano")
         cy.get('#wsf-1-field-30').should("be.visible").type("Erce")
         cy.get('#wsf-1-field-31').should("be.visible").type("javier@gmail.com")
@@ -18,10 +14,9 @@ describe('Practica con CheckBox', () => {
         cy.get('#wsf-1-label-36-row-3').should("be.visible").click()
         cy.get('#wsf-1-field-34').should("be.visible").click()
         cy.get('p').contains("Gracias por tu encuesta.")
-        
-    });
+    }
 
-    it('logearse con datos con mail NO validos', () => {
+    logDatosMailNoValidos() {
         cy.get('#wsf-1-field-29').should("be.visible").type("Maximiliano")
         cy.get('#wsf-1-field-30').should("be.visible").type("Erce")
         cy.get('#wsf-1-field-31').should("be.visible").type("javiergmail.com")
@@ -29,7 +24,8 @@ describe('Practica con CheckBox', () => {
         cy.get('#wsf-1-field-33').should("be.visible").type("Av siempre viva")
         cy.get('#wsf-1-label-36-row-3').should("be.visible").click()
         cy.get('#wsf-1-field-34').should("be.visible").click()
-        cy.get('#wsf-1-invalid-feedback-31').contains("Please provide a valid email.")        
-    });
+        cy.get('#wsf-1-invalid-feedback-31').contains("Please provide a valid email.") 
+    }
+}
 
-}) 
+export default CheckBox
