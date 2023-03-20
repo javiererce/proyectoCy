@@ -4,7 +4,6 @@ describe("Testear la Home de www.freegrangetester", ()=>{
     beforeEach(()=>{
         cy.visit("https://www.freerangetesters.com/")
     });
-
     it('Should have a title', () => {
         cy.title().should("include","Aprender Testing")
         cy.get('#comp-l02x1m8d3label').click() 
