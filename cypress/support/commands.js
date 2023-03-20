@@ -1,5 +1,3 @@
-import { isWindow } from "cypress/types/jquery"
-import { window } from "wd/lib/commands"
 
  Cypress.Commands.add('login', () => {
     cy.visit("https://the-internet.herokuapp.com")
@@ -27,17 +25,9 @@ import { window } from "wd/lib/commands"
     return new Cypress.Promise(resolve =>{
         resolve(iframe.contents().find(selector));
     })
-
   })
 //------------------------------------------------
- Cypress.Commands.overwrite('visitSameTab', () => {
-    cy.on('windows:before', () =>{
-        cy.stub(win,"open").as("windowOpen").callsFake(()=>{
-            cy.visit(url)
-        })
-    })
 
- })
 
 
 //---------------------------------------------------------------

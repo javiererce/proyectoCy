@@ -13,7 +13,8 @@
     "@cypress/xpath": "^2.0.3",
     "@shelex/cypress-allure-plugin": "^2.36.0",
     "cypress": "^12.8.1",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "mochawesome-screenshots": "^1.7.3"
   },
   "dependencies": {
     "chi": "^0.0.10",
