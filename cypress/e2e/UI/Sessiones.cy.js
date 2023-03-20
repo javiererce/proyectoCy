@@ -6,7 +6,6 @@ describe("Sesiones y Cookies",()=>{
         cy.visit("https://the-internet.herokuapp.com/login")
         cy.title().should("contain","The Internet")
     });
-
     it('Sin sesion guardada', () => {
         cy.get("#username").should("be.visible").type("tomsmith")
         cy.get('#password').should("be.visible").type("SuperSecretPassword!")
@@ -16,7 +15,6 @@ describe("Sesiones y Cookies",()=>{
             expect(cookie[0]).to.have.property("name","optimizelyPendingLogEvents")
         })
     })
-
     it('Seteo de Cookie', () => {
         cy.get("#username").should("be.visible").type("tomsmith")
         cy.get('#password').should("be.visible").type("SuperSecretPassword!")
