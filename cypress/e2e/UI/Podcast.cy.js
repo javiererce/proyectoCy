@@ -9,4 +9,8 @@ describe("Podcast de www.freerangetesters.com",()=>{
         cy.get('#comp-l02x1m8d3label').should("exist").click({force:true})
         cy.get('.font_5 > [style="letter-spacing:normal;"] > span').should("be.visible")
     });
+    it('Validar boton de podcast', () => {
+        cy.get('#comp-l02x1m8d3label').should("exist").click({force:true})
+        cy.get('.font_5 > [style="letter-spacing:normal;"] > span').should("be.visible")
+    });
 })
