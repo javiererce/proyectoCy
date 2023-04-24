@@ -14,9 +14,10 @@
     "@shelex/cypress-allure-plugin": "^2.36.0",
     "cypress": "^12.8.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "mochawesome-screenshots": "^1.7.3"
+    "mochawesome-screenshots": "^1.7.0"
   },
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^3.4.0",
     "chi": "^0.0.10",
     "mocha": "^10.2.0"
   }

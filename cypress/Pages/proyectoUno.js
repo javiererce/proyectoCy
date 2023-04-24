@@ -1,6 +1,7 @@
 class CheckBox{
     visitCheckBox(){
         cy.visit("https://testingqarvn.com.es/prueba-de-campos-checkbox/")
+        cy.viewport(1440,900)
         cy.title().should("eq","Prueba de campos Checkbox | TestingQaRvn")
         cy.wait(1000)
     }

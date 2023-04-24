@@ -6,11 +6,11 @@ const checkBox = new CheckBox;
 describe('Practica con CheckBox', () => {
     beforeEach(()=>{
         checkBox.visitCheckBox()
-    })
+    });
     it('logearse con datos validos', () => {
-        checkBox.logDatosValidos()
+        checkBox.logDatosValidos();
     });
-    it('logearse con datos de mail NO validos', () => {
-        checkBox.logDatosMailNoValidos() 
+    it('logearse con mail NO validos', () => {
+        checkBox.logDatosMailNoValidos();
     });
-}) 
+});
