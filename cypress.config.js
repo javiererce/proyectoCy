@@ -11,7 +11,6 @@ module.exports = defineConfig({
     },
     experimentalStudio: true,
     screenshotOnRunFailure: false
-  
   },
   video:false,
 });
