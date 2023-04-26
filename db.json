@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Ejercicio Json-Server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Cypress",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "Maximiliano"
+  }
+}

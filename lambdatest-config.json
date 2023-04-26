@@ -1,0 +1,38 @@
+{
+   "lambdatest_auth": {
+      "username": "javiererce",
+      "access_key": "LG9oTEqIZiU4lA3RDMrSSOKffvRNNei8R99QLrA0vuljgZmyVI"
+   },
+   "browsers": [
+      {
+         "browser": "Chrome",
+         "platform": "Windows 11",
+         "versions": [
+            "latest-1"
+         ]
+      },
+      {
+         "browser": "Firefox",
+         "platform": "Windows 11",
+         "versions": [
+            "latest-1"
+         ]
+      }
+   ],
+   "run_settings": {
+      "reporter_config_file": "base_reporter_config.json",
+      "build_name": "Integracion_LandaTest",
+      "parallels": 1,
+      "specs": "-/cypress/e2e/UI/*",
+      "ignore_files": "",
+      "network": false,
+      "headless": false,
+      "npm_dependencies": {
+         "cypress": "10"
+      }
+   },
+   "tunnel_settings": {
+      "tunnel": false,
+      "tunnel_name": null
+   }
+}
