@@ -4,8 +4,8 @@ pipeline{
     agent any
 
     parameters {
-        string (name:spec,defaultValue: "cypress/e2e/**/**",description:"Ej: cypress/e2e/POM/*.cy.js")
-        choise(name: "Browser",choise:["chrome","edge","firefox"])
+        string (name:"SPEC",defaultValue: "cypress/e2e/**/**",description:"Ej: cypress/e2e/POM/*.cy.js")
+        choise(name: "BROWSER",choise:["chrome","edge","firefox"])
     }
 
     options{
@@ -23,7 +23,7 @@ pipeline{
         stage("TESTING"){
             steps{
                 bat "npm i"
-                bat "npx cypress run --browser edge ${Browser}" --spec ${SPEC}""
+                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
 
