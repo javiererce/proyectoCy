@@ -10,7 +10,7 @@ module.exports = defineConfig({
       
     },
     experimentalStudio: true,
-    "screenshotOnRunFailure": false
+    screenshotOnRunFailure: false
   
   },
   video:false,
