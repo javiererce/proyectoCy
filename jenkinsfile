@@ -1,44 +1,46 @@
-pipeline {
+
+
+pipeline{
     agent any
 
-    tools {nodejs "node"}
+    parameters {
+        string (name:spec,defaultValue: "cypress/e2e/**/**",description:"Ej: cypress/e2e/POM/*.cy.js")
+        choise(name: "Browser",choise:["chrome","edge","firefox"])
+    }
 
-    stages {
-
-        stage('Cypress Parallel Test Suite') {
-            parallel {
-                stage('Slave 1') {
-                    agent {
-                        label "Agent2_1"
-                    }
-                    steps {
-                        git url: 'https://github.com/javiererce/proyectoCy.git'
-                        bat 'npm install'
-                        bat 'npm update'                       
-                        bat 'npx cypress run cypress run --record --key 8b77a859-ed1c-4937-8ab9-205c802d0796  --parallel'
-                    
-                    }
-                }
-
-                stage('Slave 2') {
-                    agent {
-                        label "Agent2_2"
-                    }
-                    steps {
-                        git url: 'https://github.com/javiererce/proyectoCy.git'
-                        bat 'npm install'
-                        bat 'npm update'                       
-                        bat 'npx cypress run cypress run --record --key 8b77a859-ed1c-4937-8ab9-205c802d0796  --parallel'
-                    
-                    }
-                }
-   
-                  
-            }
-
-             
-        }
+    options{
+        ansiColor("xtern")
 
     }
-            
+
+    stages{
+        stage("build"){
+            steps{
+                echo "Building application"
+            }
+        }
+
+        stage("TESTING"){
+            steps{
+                bat "npm i"
+                bat "npx cypress run --Browser ${Browser}" --spec ${SPEC}""
+            }
+        }
+
+         stage("DEPLOY"){
+            steps{
+                echo "Deploying application"
+            }
+        }
+    }
+
+    post {
+        always {
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+        }
+    }
+        
+    
 }
+
+
