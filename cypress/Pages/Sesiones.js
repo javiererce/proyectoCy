@@ -15,10 +15,8 @@ class LoginSesion{
         cy.get('#password').should("be.visible").type("SuperSecretPassword!")
         cy.get('.fa').should("be.visible").click()
         cy.get('#flash').should("contain","You logged into a secure area!")
-        cy.getCookie("cook").should("not.exist")
+    cy.getCookie("cook").should("not.exist") 
     }
-
 }
-
 
 export default LoginSesion

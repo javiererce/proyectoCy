@@ -7,10 +7,12 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       return config;
+      
     },
     experimentalStudio: true
+  
   },
-  video:false
+  video:false,
 });
 
 
