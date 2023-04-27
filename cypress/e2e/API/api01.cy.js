@@ -24,7 +24,6 @@ describe("Ejercicio de Apis con json-server",()=>{
             datos = JSON.parse(JSON.stringify(response.body))
             expect(datos[0]).has.property("title","Ejercicio Json-Server")
             expect(datos[0]).has.property("author","typicode")
-
         })
 
     });
