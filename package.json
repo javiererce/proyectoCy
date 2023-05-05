@@ -1,7 +1,6 @@
 {
   "name": "proyectocy",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "cy:run": "cypress run",
@@ -22,5 +21,6 @@
     "@badeball/cypress-cucumber-preprocessor": ">=11.4.0",
     "chi": "^0.0.10",
     "mocha": "^10.2.0"
-  }
+  },
+  "description": ""
 }
