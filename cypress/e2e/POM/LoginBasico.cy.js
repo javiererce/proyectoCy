@@ -15,5 +15,4 @@ describe("Login de https://the-internet.herokuapp.com/login",()=>{
     it('Validar mensaje de error cuando nos logueamos con datos incorrectos', () => {
         loginBasico.validarMensajeError()
     });
-
 });
