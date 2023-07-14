@@ -12,7 +12,8 @@ describe("Testear la Home de www.freegrangetester", ()=>{
     });
 
     it('Hay un link llamado blog en la barra de navegacion', () => {
-        cy.get('#comp-l02x1m8d1label').should("have.text","Blog")    
+        cy.wait(3)
+        cy.get('#comp-l02x1m8d4label').should("have.text","Blog")    
     });
 
     it('Existe un boton llamado Empesa a aprenderen el HOME', () => {
