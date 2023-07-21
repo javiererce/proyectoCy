@@ -13,6 +13,19 @@ module.exports = defineConfig({
     screenshotOnRunFailure: false
   },
   video:false,
-});
+  retries: 0,
+  viewportWidth: 1280,
+  viewportHeight: 720,
+//-------------------------------
+  env:{
+    adminUser:{
+      username: 'admin',
+      password: 'admin123',
+    }
+  },
+//-------------------------------
+
+
+})
 
 
