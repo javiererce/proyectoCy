@@ -20,7 +20,8 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": ">=11.4.0",
     "chi": "^0.0.10",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "mocha-allure-reporter": "^1.4.0"
   },
   "description": ""
 }
