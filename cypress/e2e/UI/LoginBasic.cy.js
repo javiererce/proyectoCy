@@ -8,5 +8,6 @@ describe("Login Feature",()=>{
         cy.get('#currentAddress').should("be.visible").type('Laprida 443 San Isidro')
         cy.get('#permanentAddress').should("be.visible").type('Laprida 443 San Isidro')
         cy.get('#submit').should("be.visible").click({force:true})
+        
     });
 })
