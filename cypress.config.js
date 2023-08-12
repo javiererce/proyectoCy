@@ -8,9 +8,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       allureWriter(on, config);
-
       return config;
-      
     },
     experimentalStudio: true,
     screenshotOnRunFailure: false
@@ -27,7 +25,6 @@ module.exports = defineConfig({
     }
   },
 //-------------------------------
-
 
 })
 
